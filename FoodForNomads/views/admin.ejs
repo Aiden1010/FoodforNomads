@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">NGO(Administrator)</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<br>
+
+<div class="container">
+    <h1>Recent Offers(Admin)</h1>
+    <%message.forEach((food)=>{%>
+    <div class="card border-primary mb-3">
+            <div class="card-header"><%=food.from%></div>
+    <h4 class="card-header"><%=food.type%></h4>
+    <div class="card-body">
+        <h4 class="card-title"><%=food.description%></h4>
+        <p class="card-text"><%=food.quantity%></p>
+    </div>
+    </div>
+
+    <%})%>
+</div>
+
+<% include ./partials/footer.ejs %>
